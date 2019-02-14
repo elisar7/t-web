@@ -1,0 +1,23 @@
+\section{Front-end}
+\begin{itemize}
+    \item \textbf{Separazione presentazione/contenuto/comportamento}: il codice HTML di ogni pagina del sito (\textbf{contenuto}) è inserito in un file \texttt{\textit{filename}.php}, il quale include come riferimenti il foglio di stile \texttt{style.css} (\textbf{presentazione}) e il file contenente gli script utilizzati dalla pagina, \texttt{\textit{filename}.js} (\textbf{comportamento}).
+    \item \textbf{Soluzioni cross-platform}:
+        Il sito è stato testato sulle ultime versioni dei seguenti browser:
+            \begin{itemize}
+                \item Safari
+                \item Google Chrome
+                \item Firefox
+                \item Opera
+            \end{itemize}
+        Si è fatto affidamento alle funzionalità di jQuery e di Bootstrap 4 per risolvere i problemi di compatibilità con eventuali browser più datati.
+    \item \textbf{Organizzazione file e cartelle di progetto}: il progetto è suddiviso nelle seguenti cartelle:
+        \begin{itemize}
+            \item \texttt{css}: questa cartella contiene il solo file \texttt{style.css}.
+            \item \texttt{files}: questa cartella contiene le immagini di copertina degli album presenti nel database.
+            \item \texttt{js}: questa cartella contiene i file JavaScript, ciascuno dei quali ha il nome della pagina web che deve eseguirne il codice.
+            \item \texttt{librerie}: questa cartella contiene i file dei framework jQuery, Bootstrap (sia CSS che JS) e Popper.js (richiesta da Bootstrap).
+            \item \texttt{php-sections}:  questa cartella contiene i file \texttt{php} delle porzioni di codice che vengono riutilizzate più volte dalle pagine (\texttt{head}, \texttt{footer}, e \texttt{navbar}).
+            \item \texttt{php-server}: questa cartella contiene i file delle funzioni \texttt{php} che vengono eseguite dal server, compreso il file \texttt{database.php} che include tutte le funzioni di accesso al database.
+            \item \texttt{php-views}: questa cartella contiene i file \texttt{php} delle pagine del sito.
+        \end{itemize}
+\end{itemize}

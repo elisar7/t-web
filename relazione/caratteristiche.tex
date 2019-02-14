@@ -1,0 +1,12 @@
+\section{Caratteristiche}
+\begin{itemize}
+    \item \textbf{Usabilità}: il sito è stato realizzato cercando di seguire le linee guida per una buona usabilità. In quest'ottica, si è evitato l'utilizzo di pop-up, messaggi di errore difficili da comprendere per l'utente e assenza di feedback dopo un'azione dell'utente.
+    \item \textbf{Interazione/animazione}: l'animazione è stata realizzata nella funzione di aggiunta di un prodotto alla wishlist o di acquisto del prodotto.\\
+    L'utente vede a sinistra il prodotto selezionato e a destra, due \textit{"box"} che riportano rispettivamente la dicitura \textit{"Trascina qui per acquistare"} e \textit{"Trascina qui per aggiungere il prodotto alla wishlist"}.\\
+    L'utente, mediante drag and drop, trascina la copertina dell'album sul box dell'azione che intende effettuare.
+    \item \textbf{Sessioni}: la sessione dell'utente viene aperta mediante login (oppure registrazione) e viene chiusa, dall'utente stesso, mediante il click sul pulsante logout (oppure, come da default per PHP, dopo 24 minuti).
+    \item \textbf{Interrogazione del database}: per l'interrogazione del database, effettuata unicamente lato server, è stata usata la classe PDO, in modo da poterne sfruttare le caratteristiche di sicurezza (per evitare gli attacchi di tipo SQL Injection) e di efficienza.\\
+    \item \textbf{Validazione dei dati in input}: i dati inseriti dall'utente vengono validati lato client utilizzando i vincoli forniti da HTML5, cioè \texttt{required} e \texttt{type}, che impediscono l'invio del form nel caso in cui i campi non siano stati compilati, oppure i dati inseriti non siano del formato adeguato (in particolare, nel caso in cui l'email inserita non sia valida e/o la password non rispetti la lunghezza minima di 8 caratteri).\\
+    Anche lato server si verifica che i campi siano stati compilati, che l'email inserita sia valida e che la password rispetti la lunghezza minima di 8 caratteri, e, inoltre, tutte le query del database che prevedono l'utilizzo di dati inseriti dall'utente vengono realizzate mediante il metodo \texttt{prepare} della classe PDO.
+    \item \textbf{Presentazione}: il layout del sito è volutamente aggressivo (testo neon su sfondo nero) in accordo con la tematica del sito e si è utilizzato Bootstrap 4 in modo tale da renderlo responsive.
+\end{itemize}

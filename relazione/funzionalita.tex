@@ -1,0 +1,12 @@
+\section{Funzionalità}
+\begin{itemize}
+    \item \textbf{Login}: l'utente effettua il login inserendo la propria email e la password nell'apposito form della pagina iniziale.\\
+    Quando l'utente clicca sul bottone \texttt{Login}, viene inviata una richiesta di tipo \texttt{POST} AJAX al server, che verifica che le informazioni fornite siano valide e che corrispondano a quelle presenti nel database e setta la variabile \texttt{\$\_SESSION["user"]}.\\
+    A questo punto la funzione JavaScript reindirizza l'utente alla home page del sito.
+    \item \textbf{Logout}: l'utente può effettuare il logout in qualsiasi momento, cliccando sul pulsante \texttt{logout} presente nella barra di navigazione.\\
+    Al click, viene eseguita la funzione \texttt{php-server/logout.php}, che, dopo aver distrutto le variabili di sessione, reindirizza l'utente alla pagina di accesso al sito.
+    \item \textbf{Registrazione}: l'utente si registra inserendo la propria email e una password nell'apposito form della pagina iniziale.\\
+    Quando l'utente clicca sul bottone \texttt{Subscribe}, viene inviata una richiesta di tipo \texttt{POST} AJAX al server, che verifica che le informazioni fornite siano valide, inserisce il nuovo utente nel database ed effettua il login (settando la variabile \texttt{\$\_SESSION["user"]}).\\
+    A questo punto la funzione JavaScript reindirizza l'utente alla home page del sito.
+    \item \textbf{Gestione del contenuto generato dall'utente}: l'utente può organizzare i prodotti a cui è interessato in una wishlist (che viene memorizzata sul database), oppure acquistare immediatamente un prodotto (che viene inserito nello storico dei prodotti acquistati). 
+\end{itemize}
